@@ -10,7 +10,9 @@ const RoomsMobile = () => {
   const [roomDetails, setRoomDetails] = useState([]);
   useEffect(() => {
     async function fetchData() {
-      const rooms = await fetch("http://localhost:4093/api/get-rooms");
+      const rooms = await fetch(
+        "https://propreturnsbe.vercel.app/api/get-rooms"
+      );
       const res = await rooms.json();
       console.log(res.rooms);
       setRoomDetails(res.rooms);
