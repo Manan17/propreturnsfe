@@ -8,7 +8,6 @@ import { FaRegLightbulb, FaWalking } from "react-icons/fa";
 import { MdOutlineLocalDrink } from "react-icons/md";
 import { TfiSpray } from "react-icons/tfi";
 import { RiBikeFill, RiTodoLine } from "react-icons/ri";
-import { useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { BsTrainFrontFill } from "react-icons/bs";
 const data = [
