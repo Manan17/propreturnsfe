@@ -104,6 +104,20 @@ const carouselData = [
 const Details = () => {
   const ref = useRef();
   const [scroll, setScroll] = useState(0);
+  const [screen, setScreen] = useState(1920);
+  useEffect(() => {
+    let width = window.innerWidth;
+    setScreen(width);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setScreen(window.innerWidth);
+    });
+    return () =>
+      window.removeEventListener("resize", () => {
+        setScreen(window.innerWidth);
+      });
+  }, []);
   const handleScroll = (amount) => {
     const newScoll = scroll + amount;
     setScroll(newScoll);
